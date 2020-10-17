@@ -20,7 +20,7 @@ If you wish to start an app with a similar stack, you can just clone this repo f
 
 ## Getting started
 
-Here are some few optional steps to get you started
+Here are some few steps to get you started
 
 ### Get your copy
 
