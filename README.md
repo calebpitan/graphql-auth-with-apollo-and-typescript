@@ -29,7 +29,7 @@ Here are some few optional steps to get you started
 2. **Clone from bash:** Open up git bash, `cd` to the directory you want it cloned to and hit the following commands
 
 ```bash
-# Usingg SSH
+# Using SSH
 git clone git@github.com:calebpitan/graphql-auth-with-apollo-and-typescript.git
 
 # Using HTTPS if still suported
@@ -77,7 +77,7 @@ npm start
 Wish to contribute? Create your fork, set this repo as an upstream and leave a pull request
 
 ```bash
-git remote add upstream git@github.com:motdotla/dotenv.git
+git remote add upstream git@github.com:calebpitan/graphql-auth-with-apollo-and-typescript.git
 ```
 
 ## License
