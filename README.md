@@ -80,6 +80,8 @@ Wish to contribute? Create your fork, set this repo as an upstream and leave a p
 git remote add upstream git@github.com:calebpitan/graphql-auth-with-apollo-and-typescript.git
 ```
 
+Make sure to always sync your fork with the upstream by periodically running `git pull upstream`
+
 ## License
 
 Licensed under the [MIT License](https://github.com/calebpitan/graphql-auth-with-apollo-and-typescript/tree/master/LICENSE)
