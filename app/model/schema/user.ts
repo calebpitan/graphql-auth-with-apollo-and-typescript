@@ -2,6 +2,9 @@ import { modelOptions, prop } from '@typegoose/typegoose'
 
 @modelOptions({ options: { customName: 'User' } })
 class UserSchema {
+  @prop({ unique: true, required: true })
+  public account_id!: string
+
   @prop({ required: true })
   public firstname!: string
 
