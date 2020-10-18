@@ -26,13 +26,9 @@ export function Authorized({ scope, message }: AuthorizedOptions): GraphQLDecora
 
       if (!account) {
         throw new AuthenticationError(message)
-      }
-
-      if (!auth) {
+      } else if (!auth) {
         throw new ForbiddenError(message)
-      }
-
-      if (auth.client.account_id !== account.account_id) {
+      } else if (auth.client.account_id !== account.account_id) {
         throw new ForbiddenError(`The authentication provided by client cannot be ambigous`)
       }
 

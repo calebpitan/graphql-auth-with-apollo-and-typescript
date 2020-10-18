@@ -9,9 +9,9 @@ class UserQueryResolver {
   }
 
   static async currentUser(root: any, args: Select<UserSelectFieldInput>, context: Context) {
-    return {
+    return await Promise.resolve({
       username: 'caleb',
-    }
+    })
   }
 }
 

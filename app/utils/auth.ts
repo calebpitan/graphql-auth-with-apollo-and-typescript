@@ -25,7 +25,7 @@ export async function verifyToken(token: string): Promise<VerifiedAuthPayload> {
   try {
     return (await Promise.resolve(jwt.verify(token, SECRET as Secret))) as VerifiedAuthPayload
   } catch (e) {
-    const { name, message, ...extensions } = e
+    const { name, message, ...extensions } = e as Error
     if (name === 'TokenExpiredError') {
       throw new JWTExpiredError(message, extensions)
     }

@@ -47,7 +47,7 @@ class UserMutationResolver {
     }
 
     const [clientPayload, serverPayload] = payloadFromUser({
-      _id: user._id,
+      _id: user._id as string,
       account_id: user.account_id,
       email: user.email,
     })
@@ -80,7 +80,7 @@ class UserMutationResolver {
     })
 
     const [clientPayload, serverPayload] = payloadFromUser({
-      _id: user._id,
+      _id: user._id as string,
       account_id: user.account_id,
       email: user.email,
     })

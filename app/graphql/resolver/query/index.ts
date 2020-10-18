@@ -1,4 +1,3 @@
-import { Context } from '../../types'
 import { QueryType } from '../types'
 import UserResolver from './user'
 

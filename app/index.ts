@@ -4,7 +4,7 @@ import mongoose from 'mongoose'
 import session from 'express-session'
 import mongostore from 'connect-mongo'
 import cors from 'cors'
-import helmet from 'helmet'
+// import helmet from 'helmet'
 import morgan from 'morgan'
 import bodyParser from 'body-parser'
 import { v4 as uuidV4 } from 'uuid'
@@ -32,6 +32,7 @@ const app = express()
 
 const server = new ApolloServer({
   typeDefs,
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   resolvers: resolvers as any,
   context({ req, res, connection }) {
     return { req, res, connection, db: mongoose.connection.db }
@@ -64,7 +65,7 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 app.use(function (req, _res, next) {
   const { authorization } = req.headers
-  const nobearer = [, undefined]
+  const nobearer = [undefined, undefined]
   const [, bearer] =
     typeof authorization === 'string' ? /bearer\s+(.+)/i.exec(authorization) ?? nobearer : nobearer
 
