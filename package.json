@@ -13,8 +13,18 @@
     "type": "git",
     "url": "git+https://github.com/calebpitan/graphql-auth-with-apollo-and-typescript.git"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "graphql",
+    "apollo-graphql",
+    "typescript",
+    "authentication",
+    "authorization",
+    "express",
+    "mongodb",
+    "mongoose",
+    "typegoose"
+  ],
+  "author": "Caleb Adepitan <calebpitan@outlook.com> (https://www.calebpitan.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/calebpitan/graphql-auth-with-apollo-and-typescript/issues"
