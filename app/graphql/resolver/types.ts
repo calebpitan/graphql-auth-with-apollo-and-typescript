@@ -48,6 +48,16 @@ export interface CreateUserInput {
   password: string
 }
 
+export interface UpdateUserInput {
+  firstname: string
+  lastname: string
+  username: string
+}
+
+export interface UpdateUserResolverInput {
+  field: UpdateUserInput
+}
+
 export interface CreateUserResolverInput {
   user: CreateUserInput
 }
