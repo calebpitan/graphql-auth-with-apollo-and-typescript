@@ -31,7 +31,7 @@ class UserMutationResolver {
       },
     } = args
 
-    const user = await UserModel.findOne(getOneOfIdentifier({ username, email })).exec()
+    const user = await UserModel.findOne(getOneOfIdentifier({ username, email }))
 
     if (!user) {
       throw new UserInputError(
