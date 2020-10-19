@@ -35,15 +35,16 @@ const Input = gql`
   }
 
   input UserSelectFieldInput {
-    _id: Boolean = true
-    firstname: Boolean = true
-    lastname: Boolean = true
-    username: Boolean = true
-    email: Boolean = true
+    _id: Boolean = false
+    account_id: Boolean = false
+    firstname: Boolean = false
+    lastname: Boolean = false
+    username: Boolean = false
+    email: Boolean = false
   }
 
   input UserSelectInput {
-    fields: UserSelectFieldInput!
+    field: UserSelectFieldInput!
   }
 `
 
