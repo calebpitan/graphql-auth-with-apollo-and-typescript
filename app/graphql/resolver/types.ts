@@ -5,7 +5,7 @@ export type Select<T> = { select: { field: T } }
 
 export interface QueryType {
   user: IGraphQLResolver<Filter<UserFilterInput>, Partial<User | null>>
-  currentUser: IGraphQLResolver<Select<UserSelectFieldInput>, Partial<User>>
+  currentUser: IGraphQLResolver<Select<UserSelectFieldInput>, Partial<User | null>>
 }
 
 export interface User {
