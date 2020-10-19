@@ -16,7 +16,7 @@ interface AuthorizedOptions {
  * Adds authorization logic to a GraphQL resolver
  * @param message The error message for unauthorized requests
  */
-export function Authorized({ scope, message }: AuthorizedOptions): GraphQLDecorator {
+export function Authorized({ message }: AuthorizedOptions): GraphQLDecorator {
   return function (_t: any, _p: string, descriptor: TypedPropertyDescriptor<IGraphQLResolver>) {
     const method = descriptor.value
 
@@ -32,7 +32,9 @@ export function Authorized({ scope, message }: AuthorizedOptions): GraphQLDecora
         throw new ForbiddenError(`The authentication provided by client cannot be ambigous`)
       }
 
-      const result = method?.apply(this, [_root, _args, context, _info])
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+      const result = await method?.apply(this, [_root, _args, context, _info])
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-return
       return result
     }
 
